@@ -1,0 +1,37 @@
+<h1> New Listing </h1>
+
+<%= form_for :listing do |l| %>
+  <p>
+    <%= l.label :property %><br>
+    <%= l.text_field :property %>
+  </p>
+
+  <p>
+    <%= l.label :price %><br>
+    <%= lnumber_area :price %>
+  </p>
+
+  <p>
+    <%= l.label :pictures %><br>
+    <%= l.file_field :pictures %>
+  </p>
+
+  <p>
+    <%= l.label :description %><br>
+    <%= l.text_field :description %>
+  </p>
+
+  <p>
+    <%= l.label :shares_avail %><br>
+    <%= l.number_field :shares_avail %>
+  </p>
+
+  <p>
+    <%= l.label :share_price %><br>
+    <%= l.number_field :share_price %>
+  </p>
+
+  <p>
+    <%= l.submit %>
+  </p>
+<% end %>

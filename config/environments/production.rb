@@ -48,6 +48,19 @@ Rails.application.configure do
 
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
+# Sending emails to Users!
+  config.action_mailer.delivery_method = :smtp
+config.action_mailer.default_url_options = { host: 'infinite-wave-21982.herokuapp.com' }
+
+ActionMailer::Base.smtp_settings = {
+    :address        => 'smtp.sendgrid.net',
+    :port           => '587',
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => 'heroku.com',
+    :enable_starttls_auto => true
+}
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
