@@ -26,6 +26,9 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+# Development doesn't send emails by default so you have to add the line below
+config.action_mailer.perform_deliveries = true
+
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
@@ -42,6 +45,8 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+
+config.action_mailer.default_url_options = { host: '127.0.0.1', port: 3000 }
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
