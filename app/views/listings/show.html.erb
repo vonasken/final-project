@@ -1,0 +1,27 @@
+<p>
+  <strong>Property:</strong>
+  <%= @listing.property %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @listing.price %>
+</p>
+<p>
+
+  <%= image_tag @listing.image.url(:medium) %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @listing.description %>
+</p>
+
+<p>
+  <strong>Shares Available:</strong>
+  <%= @listing.shares_available %>
+</p>
+<p>
+  <strong>Share Price:</strong>
+  <%= number_with_delimiter(@listing.sharePrice, :delimiter => ',') %>
+</p>

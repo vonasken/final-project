@@ -1,6 +1,6 @@
 <h1> New Listing </h1>
 
-<%= form_for :listing do |l| %>
+<%= form_for @listing, html: { multipart: true } do |l| %>
   <p>
     <%= l.label :property %><br>
     <%= l.text_field :property %>
@@ -8,27 +8,27 @@
 
   <p>
     <%= l.label :price %><br>
-    <%= lnumber_area :price %>
+    <%= l.number_field :price %>
   </p>
 
   <p>
-    <%= l.label :pictures %><br>
-    <%= l.file_field :pictures %>
+    <%= l.label :image %><br>
+    <%= l.file_field :image %>
   </p>
 
   <p>
     <%= l.label :description %><br>
-    <%= l.text_field :description %>
+    <%= l.text_area :description %>
   </p>
 
   <p>
-    <%= l.label :shares_avail %><br>
-    <%= l.number_field :shares_avail %>
+    <%= l.label :shares_available %><br>
+    <%= l.number_field :shares_available %>
   </p>
 
   <p>
-    <%= l.label :share_price %><br>
-    <%= l.number_field :share_price %>
+    <%= l.label :sharePrice %><br>
+    <%= l.number_field :sharePrice %>
   </p>
 
   <p>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  property: MyString
+  price: 1
+  description: MyText
+  sharesAvailaible: 1
+  sharePrice: 1
+
+two:
+  property: MyString
+  price: 1
+  description: MyText
+  sharesAvailaible: 1
+  sharePrice: 1

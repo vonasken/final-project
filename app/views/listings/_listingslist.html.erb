@@ -1,0 +1,16 @@
+
+
+<% Listing.all.each do |listing| %>
+ <div class="grid-item">
+
+<div class="property">
+  
+<%= listing.property %><br>
+</div>
+
+<%= number_with_delimiter(listing.price, :delimiter => ',') %><br>
+<%= image_tag listing.image.url(:medium), class:"picture"%>
+<%= listing.sharePrice %>
+
+</div>
+<% end %>
