@@ -8,5 +8,7 @@ class User < ApplicationRecord
   devise_mailer.send(notification, self, *args).deliver_later
 end
 
+has_many :transactions
 
+validates :name, presence: true
 end
