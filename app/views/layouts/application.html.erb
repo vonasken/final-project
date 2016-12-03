@@ -14,11 +14,18 @@
 
    <!--Let browser know website is optimized for mobile-->
        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+       <!--Import jQuery before materialize.js-->
+            <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+            <script type="text/javascript" src="js/materialize.min.js"></script>
+
      </head>
 
   </head>
 
   <body>
+
+
     <!-- ========================================== -->
     <div class="container">
   <% flash.each do |key, value| %>
@@ -28,30 +35,26 @@
   <% end %>
 </div>
 
-<%= yield :top_content %>
+<!-- <%= yield :top_content %> -->
 
 <div class="container">
 
 
     <!-- ========================================= -->
     <!-- ===============ROOTS & LINKS (SIGN UP, LOGOUT, etc....)========================== -->
-    <nav class="navbar navbar-inverse">
-  <div class="container">
-    <!-- <div class="navbar-header">
-      <%= link_to 'Prinvest', root_path , class: 'navbar-brand' %>
-    </div> -->
-    <div id="navbar">
-      <ul class="nav navbar-nav">
+    <nav class="right">
+
+      <ul >
         <li><%= link_to 'Home', root_path %></li>
       </ul>
-      <ul class="nav navbar-nav pull-right">
+      <ul >
         <% if user_signed_in? %>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          <li >
+
               <%= current_user.name %>
-              <span class="caret"></span>
+
             </a>
-            <ul class="dropdown-menu" role="menu">
+            <ul >
               <li><%= link_to 'Profile', edit_user_registration_path %></li>
               <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
             </ul>
@@ -62,16 +65,13 @@
         <% end %>
       </ul>
     </div>
-  </div>
+
 </nav>
 <!-- ===============above: ROOTS & LINKS (SIGN UP, LOGOUT, etc....)========================== -->
-<!-- ===========================LISTINGS===================================== -->
 
-
-<!-- ======================================================================== -->
 
     <%= yield %>
 
-</div>
+
   </body>
 </html>

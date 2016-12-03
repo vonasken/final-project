@@ -8,6 +8,8 @@ class CreateListings < ActiveRecord::Migration[5.0]
       t.integer :sharePrice
 
       t.timestamps
+
+
     end
   end
 end
