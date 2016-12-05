@@ -1,27 +1,50 @@
-<p>
-  <strong>Property:</strong>
-  <%= @listing.property %>
-</p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @listing.price %>
-</p>
 <p>
 
   <%= image_tag @listing.image.url(:medium) %>
+
+</p>
+<p>
+  <h2><strong>
+  <%= @listing.property %></strong></h2>
+</p>
+<p>
+
+  <h4><%= @listing.address %></h6>
 </p>
 
 <p>
-  <strong>Description:</strong>
+
+  <h5>$<%= number_with_delimiter(@listing.price, :delimiter => ',') %></h4>
+
+</p>
+
+
+<p>
+
+  <%= @listing.aptDetsBed %> Beds |
+  <%= @listing.aptDetsBath %> Baths |
+  <%= @listing.aptDetsSqft %> Sqft
+
+</p>
+
+<p>
+  <h6><% if @listing.description.blank? == false %>
+    <strong> <%= "description :" %></strong>
+    <% end %>
   <%= @listing.description %>
 </p>
 
 <p>
-  <strong>Shares Available:</strong>
+  <% if @listing.shares_available.blank? == false %>
+    <strong> <%= "Shares Available :" %></strong>
+    <% end %>
   <%= @listing.shares_available %>
 </p>
 <p>
-  <strong>Share Price:</strong>
-  <%= number_with_delimiter(@listing.sharePrice, :delimiter => ',') %>
+  <% if @listing.sharePrice.blank? == false %>
+    <strong> <%= "Share Price :" %></strong>
+ <%= @listing.sharePrice %>
+  <% end %>
 </p>
+</h6>

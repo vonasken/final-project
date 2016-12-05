@@ -18,6 +18,7 @@ class ListingsController < ApplicationController
 
 private
 def listing_params
-  params.require(:listing).permit(:property, :price, :image)
+  params.require(:listing).permit(:property, :price, :image, :address, :description, :shares_available, :sharePrice, :aptDetsBed, :aptDetsBath, :aptDetsSqft,
+  :factsFeature)
 end
 end
