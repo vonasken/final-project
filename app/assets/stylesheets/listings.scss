@@ -1,3 +1,17 @@
 // Place all the styles related to the Listings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.josh {
+  height: 300px;
+}
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+.card-image {
+  background-image: image-url("sls-brickell-miami.jpg");
+  background-height: 250px;
+  background-width: 250px;
+}

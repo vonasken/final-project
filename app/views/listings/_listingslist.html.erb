@@ -1,40 +1,22 @@
 
 
-<% Listing.all.each do |listing| %>
 
 <div class="row">
-    <div class="col s12 m7">
-      <div class="card">
+  <% Listing.all.each do |listing| %>
+
+      <div class="card col s4 m4">
         <div class="card-image">
-            <%= image_tag listing.image.url(:thumb)%> 
+          <%= image_tag listing.image.url(:medium) %>
           <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+      <p> <%= listing.description %></p>
         </div>
         <div class="card-action">
-          <a href="#">This is a link</a>
+          <%= link_to "Details", listing_path(listing) %>
         </div>
       </div>
-    </div>
-  </div>
 
 
-
-            <%= listing.property %>
-
-<!-- ========================================================= -->
-
-  <h5>$<%= listing.sharePrice %></h5>
-
-  <%= listing.aptDetsBed %> &nbsp; Bed &nbsp; | &nbsp;<%= listing.aptDetsBath %> &nbsp; Bath &nbsp;|&nbsp; <%= listing.aptDetsSqft %>  &nbsp; Sqft <br>
-  <p><a href="listings/:id">Details</a></p>
+  <% end %>
 </div>
-
-
-  <p> <%= listing.description %></p>
-
-
-
-<% end %>
