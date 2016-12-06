@@ -8,6 +8,12 @@ Devise.setup do |config|
   # by default. You can change it below and use your own secret key.
   config.secret_key = '31e4b32967529e4d732e439df9a6acc8d22979ec634ee0866f1b5aea079ddf5a3657362a1aaf34437eb4914c4d4bfec1940295824bcef6701ba95f7baa8914bc'
 
+# ==================LINKEDIN SignIn ====================================
+require 'omniauth-linkedin'
+config.omniauth :linkedin, "86uwd0cashrh32
+", "XjUczuFXPMwZ3gK5"
+
+
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
