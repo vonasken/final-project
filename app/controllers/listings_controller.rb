@@ -16,6 +16,10 @@ class ListingsController < ApplicationController
 
   end
 
+  def temp
+    
+  end
+
 private
 def listing_params
   params.require(:listing).permit(:property, :price, :image, :address, :description, :shares_available, :sharePrice, :aptDetsBed, :aptDetsBath, :aptDetsSqft,

@@ -10,8 +10,7 @@ Devise.setup do |config|
 
 # ==================LINKEDIN SignIn ====================================
 require 'omniauth-linkedin'
-config.omniauth :linkedin, "86uwd0cashrh32
-", "XjUczuFXPMwZ3gK5"
+config.omniauth :linkedin, ENV['linked_in_client_id'], ENV['linked_in_client_secret'] 
 
 
   # ==> Mailer Configuration

@@ -35,37 +35,35 @@
 
 <!-- <%= yield :top_content %> -->
 
-<div class="container">
+<!-- <div class="container"> -->
 
 
     <!-- ========================================= -->
     <!-- ===============ROOTS & LINKS (SIGN UP, LOGOUT, etc....)========================== -->
-    <nav >
+    <!-- <nav > -->
 
-      <ul >
-        <li><%= link_to 'Home', root_path %></li>
-      </ul>
-      <ul >
+
+        <!-- <%= link_to 'Home', root_path %>
+
+
         <% if user_signed_in? %>
-          <li >
 
-            Signed in as <%= current_user.name %>. Not you?
+
+            Signed in as <%= current_user.name %>.
 
             </a>
-            <ul >
-              <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
-              <li><%= link_to 'Profile', user_path(current_user) %></li>
-            </ul>
-          </li>
-          <% else %>
-          <li><%= link_to 'Sign Up', new_user_registration_path %> or </li>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
-          <%= link_to "Sign in with Linkedin", user_linkedin_omniauth_authorize_path(:linkedin) %>
-        <% end %>
-      </ul>
-    </div>
+              <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+              <%= link_to 'Profile', user_path(current_user) %>
 
-</nav>
+          <% else %>
+          <%= link_to 'Sign Up', new_user_registration_path %> or
+          <%= link_to 'Sign In', new_user_session_path %>
+          <%= link_to "Sign in with Linkedin", user_linkedin_omniauth_authorize_path %>
+        <% end %> -->
+
+    <!-- </div> -->
+
+<!-- </nav> -->
 <!-- ===============above: ROOTS & LINKS (SIGN UP, LOGOUT, etc....)========================== -->
 
 

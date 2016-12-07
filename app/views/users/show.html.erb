@@ -1,1 +1,35 @@
-<%= current_user.name %>
+<!DOCTYPE html>
+  <html>
+      <head>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+
+
+<!-- ======================================================== -->
+</body>
+<ul id="slide-out" class="side-nav">
+    <li><div class="userView">
+      <div class="background">
+        <%= image_tag "Glendora.jpg" %>
+      </div>
+      <a href="#!user"><%= image_tag("sls-brickell-miami.jpg", :class => "circle") %></a>
+      <a href="#!name"><span class="white-text name", style="background-color:rgba(0, 0, 0, 0.5);"><%= current_user.name %></span></a>
+      <a href="#!email"><span class="white-text email", style="background-color:rgba(0, 0, 0, 0.5);"><strong><%= current_user.email %></strong></span></a>
+    </div></li>
+    <li><a href="#!">Investment</a></li>
+    <li><a href="#!">Favorite</a></li>
+    <li><a href="#!">Transaction History</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Settings</a></li>
+    <li><%= link_to 'Edit Account', edit_user_registration_path %></li>
+    <li><%= link_to 'Link Bank Account', edit_user_registration_path %></li>
+
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+
+
+
+</body>
+</html>
