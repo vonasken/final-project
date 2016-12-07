@@ -1,19 +1,3 @@
-<!-- ==================================================== -->
-
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <meta name="theme-color" content="#2196F3">
-  <title>Prinvest Real Estate Investments</title>
-
-  <!-- CSS  -->
-  <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
-  <link href="min/custom-min.css" type="text/css" rel="stylesheet" >
-</head>
-<body id="top" class="scrollspy">
-
 <!-- Pre Loader -->
 <div id="loader-wrapper">
   <div id="loader"></div>
@@ -38,7 +22,7 @@
 
               <% else %>
           <!-- ============================Sign Up Dropdown ======================================================= -->
-                  <li><a class='dropdown-button' href='#' data-activates='dropdown1'>Sign Up</a></li>
+                  <li><a class='dropdown-button blah' href='#' data-activates='dropdown1'>Sign Up</a></li>
                     <ul id='dropdown1' class='dropdown-content'>
                       <li><%= link_to 'with email', new_user_registration_path %></li>
                       <li class="divider"></li>
@@ -46,8 +30,8 @@
                       </ul>
             <!-- =================================================================================== -->
             <!-- ============================Sign In Dropdown ======================================================= -->
-                    <li><a class='dropdown-button' href='#' data-activates='dropdown1'>Sign In</a></li>
-                      <ul id='dropdown1' class='dropdown-content'>
+                    <li><a class='dropdown-button' href='#' data-activates='dropdown2'>Sign In</a></li>
+                      <ul id='dropdown2' class='dropdown-content'>
                           <li><%= link_to 'with email', new_user_session_path %></li>
                       <li class="divider"></li>
                             <li><%= link_to "with Linkedin", user_linkedin_omniauth_authorize_path %></li>
@@ -68,21 +52,24 @@
 
             <% else %>
         <!-- ============================Sign Up Dropdown  ======================================================= -->
-                <li><a class='dropdown-button' href='#' data-activates='dropdown1'>Sign Up</a></li>
-                  <ul id='dropdown1' class='dropdown-content'>
+                <li><a class='dropdown-button' href='#' data-activates='dropdown3'>Sign Up</a></li>
+                  <ul id='dropdown3' class='dropdown-content'>
                     <li><%= link_to 'with email', new_user_registration_path %></li>
                     <li class="divider"></li>
                           <li><%= link_to "with Linkedin", user_linkedin_omniauth_authorize_path %></li>
                     </ul>
           <!-- =================================================================================== -->
           <!-- ============================Sign In Dropdown ======================================================= -->
-                  <li><a class='dropdown-button' href='#' data-activates='dropdown1'>Sign In</a></li>
-                    <ul id='dropdown1' class='dropdown-content'>
+                  <li><a class='dropdown-button' href='#' data-activates='dropdown4'>Sign In</a></li>
+                    <ul id='dropdown4' class='dropdown-content'>
                         <li><%= link_to 'with email', new_user_session_path %></li>
                     <li class="divider"></li>
                           <li><%= link_to "with Linkedin", user_linkedin_omniauth_authorize_path %></li>
                     </ul>
-        <!-- =================================================================================== -->
+          <!-- =================================================================================== -->
+          <!-- =================================================================================== -->
+          <!-- =================================================================================== -->
+          <!-- =================================================================================== -->
             <% end %>
               </ul>
           <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
@@ -116,21 +103,21 @@
 
           <div  class="col s12 m4 l4">
               <div class="center promo promo-example">
-                  <i class="mdi-image-flash-on"></i>
+                  <i class="material-icons">flash_on</i>
                   <h5 class="promo-caption">Speeds up development</h5>
                   <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
               </div>
           </div>
           <div class="col s12 m4 l4">
               <div class="center promo promo-example">
-                  <i class="mdi-social-group"></i>
+                  <i class="material-icons">socialgroup</i>
                   <h5 class="promo-caption">User Experience Focused</h5>
                   <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
               </div>
           </div>
           <div class="col s12 m4 l4">
               <div class="center promo promo-example">
-                  <i class="mdi-hardware-desktop-windows"></i>
+                  <i class="material-icons">hardware_desktop_windows</i>
                   <h5 class="promo-caption">Fully responsive</h5>
                   <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
               </div>
@@ -142,12 +129,12 @@
 <!--Work-->
 <div class="section scrollspy" id="work">
   <div class="container">
-      <h2 class="header text_b">Work </h2>
+      <h2 class="header text_b">Listings</h2>
       <div class="row">
           <div class="col s12 m4 l4">
               <div class="card">
                   <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" src="img/project1.jpg">
+                      <img class="activator" src="/assets/project1.jpg">
                   </div>
                   <div class="card-content">
                       <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
@@ -162,7 +149,7 @@
           <div class="col s12 m4 l4">
               <div class="card">
                   <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" src="img/project2.jpeg">
+                      <img class="activator" src="/assets/project2.jpeg">
                   </div>
                   <div class="card-content">
                       <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
@@ -177,7 +164,7 @@
           <div class="col s12 m4 l4">
               <div class="card">
                   <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" src="img/project3.png">
+                      <img class="activator" src="/assets/project3.png">
                   </div>
                   <div class="card-content">
                       <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
@@ -192,7 +179,7 @@
           <div class="col s12 m4 l4">
               <div class="card">
                   <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" src="img/project4.jpg">
+                      <img class="activator" src="/assets/project4.jpg">
                   </div>
                   <div class="card-content">
                       <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
@@ -207,7 +194,7 @@
           <div class="col s12 m4 l4">
               <div class="card">
                   <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" src="img/project5.png">
+                      <img class="activator" src="/assets/project5.png">
                   </div>
                   <div class="card-content">
                       <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
@@ -222,7 +209,7 @@
           <div class="col s12 m4 l4">
               <div class="card">
                   <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" src="img/project6.jpeg">
+                      <img class="activator" src="/assets/project6.jpeg">
                   </div>
                   <div class="card-content">
                       <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
@@ -240,7 +227,7 @@
 
 <!--Parallax-->
 <div class="parallax-container">
-  <div class="parallax"><img src="img/parallax1.png"></div>
+  <div class="parallax"><img src="/assets/parallax1.png"></div>
 </div>
 
 <!--Team-->
@@ -251,7 +238,7 @@
           <div class="col s12 m3">
               <div class="card card-avatar">
                   <div class="waves-effect waves-block waves-light">
-                      <img class="activator" src="img/avatar1.png">
+                      <img class="activator" src="/assets/avatar1.png">
                   </div>
                   <div class="card-content">
                       <span class="card-title activator grey-text text-darken-4">Flash <br/>
@@ -276,7 +263,7 @@
           <div class="col s12 m3">
               <div class="card card-avatar">
                   <div class="waves-effect waves-block waves-light">
-                      <img class="activator" src="img/avatar2.png">
+                      <img class="activator" src="assets/avatar2.png">
                   </div>
                   <div class="card-content">
                       <span class="card-title activator grey-text text-darken-4">Cat Woman<br/>
@@ -302,7 +289,7 @@
           <div class="col s12 m3">
               <div class="card card-avatar">
                   <div class="waves-effect waves-block waves-light">
-                      <img class="activator" src="img/avatar3.png">
+                      <img class="activator" src="/assets/avatar3.png">
                   </div>
                   <div class="card-content">
                       <span class="card-title activator grey-text text-darken-4">
@@ -328,7 +315,7 @@
           <div class="col s12 m3">
               <div class="card card-avatar">
                   <div class="waves-effect waves-block waves-light">
-                      <img class="activator" src="img/avatar4.png">
+                      <img class="activator" src="/assets/avatar4.png">
                   </div>
                   <div class="card-content">
                       <span class="card-title activator grey-text text-darken-4">Robin<br/>
@@ -385,10 +372,10 @@
               </form>
           </div>
           <div class="col l3 s12">
-              <h5 class="white-text">joashpereira.com</h5>
+              <h5 class="white-text">Prinvest.co</h5>
               <ul>
-                  <li><a class="white-text" href="http://www.joashpereira.com/">Home</a></li>
-                  <li><a class="white-text" href="http://www.joashpereira.com/blog">Blog</a></li>
+                  <li><a class="white-text" href="http://www.prinvest.co/">Home</a></li>
+                  <li><a class="white-text" href="http://www.prinvest.co/blog">Blog</a></li>
               </ul>
           </div>
           <div class="col l3 s12">
@@ -419,19 +406,12 @@
       </div>
   </div>
   <div class="footer-copyright default_color">
-      <div class="container">
-          Made by <a class="white-text" href="http://joashpereira.com">Joash Pereira</a>. Thanks to <a class="white-text" href="http://materializecss.com/">materializecss</a>
-      </div>
+    <!-- <div class="container">
+        Made by <a class="white-text" href="http://joashpereira.com">Joash Pereira</a>. Thanks to <a class="white-text" href="http://materializecss.com/">materializecss</a>
+    </div> -->
   </div>
 </footer>
 
-
-  <!--  Scripts-->
-  <script src="min/plugin-min.js"></script>
-  <script src="min/custom-min.js"></script>
-
-  </body>
-</html>
 
 
 <!-- ==================================================== -->

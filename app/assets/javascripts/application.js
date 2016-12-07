@@ -10,13 +10,13 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require modernizr
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
 //= require materialize-sprockets
-//= require bootstrap/dropdown
 //= require turbolinks
 //= require_tree .
+
 $( document ).on('turbolinks:load', function() {
   $('.parallax').parallax();
   // Initialize collapse button
