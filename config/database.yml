@@ -24,4 +24,5 @@ test:
 production:
   <<: *default
   database: prinvest_production
+  username: prinvest 
   password: <%= ENV['PRINVEST_DATABASE_PASSWORD'] %>

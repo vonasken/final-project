@@ -12,6 +12,7 @@
 //
 //= require modernizr
 //= require jquery
+//= require hermitage
 //= require jquery_ujs
 //= require materialize-sprockets
 //= require turbolinks
@@ -23,5 +24,5 @@ $( document ).on('turbolinks:load', function() {
   $(".button-collapse").sideNav();
   // Initialize collapsible (uncomment the line below if you use the dropdown variation)
   //$('.collapsible').collapsible();
-    $('.carousel').carousel();
+    
 });

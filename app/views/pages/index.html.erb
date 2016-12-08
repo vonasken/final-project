@@ -7,76 +7,7 @@
 
 </div>
 
-<!--Navigation-->
-<div class="navbar-fixed">
-  <nav id="nav_f" class="default_color" role="navigation">
-      <div class="container">
-          <div class="nav-wrapper">
-          <a href="#" id="logo-container" class="brand-logo">Prinvest</a>
-              <ul class="right hide-on-med-and-down">
-                  <li><%= link_to 'Home', root_path %></li>
-                <% if user_signed_in? %>
-                  <li>Signed in as <%= current_user.name %>.</li>
-                    <li><%= link_to 'Profile', user_path(current_user) %></li>
-                      <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
 
-              <% else %>
-          <!-- ============================Sign Up Dropdown ======================================================= -->
-                  <li><a class='dropdown-button blah' href='#' data-activates='dropdown1'>Sign Up</a></li>
-                    <ul id='dropdown1' class='dropdown-content'>
-                      <li><%= link_to 'with email', new_user_registration_path %></li>
-                      <li class="divider"></li>
-                            <li><%= link_to "with Linkedin", user_linkedin_omniauth_authorize_path %></li>
-                      </ul>
-            <!-- =================================================================================== -->
-            <!-- ============================Sign In Dropdown ======================================================= -->
-                    <li><a class='dropdown-button' href='#' data-activates='dropdown2'>Sign In</a></li>
-                      <ul id='dropdown2' class='dropdown-content'>
-                          <li><%= link_to 'with email', new_user_session_path %></li>
-                      <li class="divider"></li>
-                            <li><%= link_to "with Linkedin", user_linkedin_omniauth_authorize_path %></li>
-                      </ul>
-                      <!-- =================================================================================== -->
-              <% end %>
-
-
-              </ul>
-
-    <!-- ================================MOBILE OPTIMIZATION=================================================== -->
-              <ul id="nav-mobile" class="side-nav">
-                <li><%= link_to 'Home', root_path %></li>
-              <% if user_signed_in? %>
-                <li>Signed in as <%= current_user.name %>.</li>
-                  <li><%= link_to 'Profile', user_path(current_user) %></li>
-                    <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
-
-            <% else %>
-        <!-- ============================Sign Up Dropdown  ======================================================= -->
-                <li><a class='dropdown-button' href='#' data-activates='dropdown3'>Sign Up</a></li>
-                  <ul id='dropdown3' class='dropdown-content'>
-                    <li><%= link_to 'with email', new_user_registration_path %></li>
-                    <li class="divider"></li>
-                          <li><%= link_to "with Linkedin", user_linkedin_omniauth_authorize_path %></li>
-                    </ul>
-          <!-- =================================================================================== -->
-          <!-- ============================Sign In Dropdown ======================================================= -->
-                  <li><a class='dropdown-button' href='#' data-activates='dropdown4'>Sign In</a></li>
-                    <ul id='dropdown4' class='dropdown-content'>
-                        <li><%= link_to 'with email', new_user_session_path %></li>
-                    <li class="divider"></li>
-                          <li><%= link_to "with Linkedin", user_linkedin_omniauth_authorize_path %></li>
-                    </ul>
-          <!-- =================================================================================== -->
-          <!-- =================================================================================== -->
-          <!-- =================================================================================== -->
-          <!-- =================================================================================== -->
-            <% end %>
-              </ul>
-          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-          </div>
-      </div>
-  </nav>
-</div>
 
 <!--Hero-->
 <div class="section no-pad-bot" id="index-banner">
@@ -98,27 +29,27 @@
   <div class="container">
       <div class="row">
           <div  class="col s12">
-              <h2 class="center header text_h2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="span_h2"> Phasellus  </span>vestibulum lorem risus, nec suscipit lorem <span class="span_h2"> laoreet quis.</span> </h2>
+              <h2 class="center header text_h2"> “We know that making the decision to invest in real estate is an important one, and it’s our goal to make this process more as easy and as transparent as possible.” <span class="span_h2"> -Marc Von Askën<h6 class="center">Founder & CEO of Prinvest. </h6></h2> </span>
           </div>
 
           <div  class="col s12 m4 l4">
               <div class="center promo promo-example">
-                  <i class="material-icons">flash_on</i>
-                  <h5 class="promo-caption">Speeds up development</h5>
+                  <%= image_tag("moneyicon.png") %>
+                  <h5 class="promo-caption">Low Minimum Investment Cost</h5>
                   <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
               </div>
           </div>
           <div class="col s12 m4 l4">
               <div class="center promo promo-example">
-                  <i class="material-icons">socialgroup</i>
-                  <h5 class="promo-caption">User Experience Focused</h5>
+                  <%= image_tag("statsicon.png") %>
+                  <h5 class="promo-caption">Transparency</h5>
                   <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
               </div>
           </div>
           <div class="col s12 m4 l4">
               <div class="center promo promo-example">
-                  <i class="material-icons">hardware_desktop_windows</i>
-                  <h5 class="promo-caption">Fully responsive</h5>
+                <%= image_tag("pie-icon.png") %>
+                  <h5 class="promo-caption">Portfolio Diversifation</h5>
                   <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
               </div>
           </div>
@@ -134,14 +65,14 @@
           <div class="col s12 m4 l4">
               <div class="card">
                   <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" src="/assets/project1.jpg">
+                      <img class="activator" src="/assets/elyseemiami.jpg">
                   </div>
                   <div class="card-content">
-                      <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
-                      <p><a href="#">Project link</a></p>
+                      <span class="card-title activator grey-text text-darken-4 highlight">Elysee Miami <i class="mdi-navigation-more-vert right"></i></span>
+                      <p><a href="#">+Details</a></p>
                   </div>
                   <div class="card-reveal">
-                      <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
+                      <span class="card-title grey-text text-darken-4">Elysee Miami <i class="mdi-navigation-close right"></i></span>
                       <p>Here is some more information about this project that is only revealed once clicked on.</p>
                   </div>
               </div>
@@ -149,14 +80,14 @@
           <div class="col s12 m4 l4">
               <div class="card">
                   <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" src="/assets/project2.jpeg">
+                      <img class="activator" src="/assets/slsbrickell.jpg">
                   </div>
                   <div class="card-content">
-                      <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
-                      <p><a href="#">Project link</a></p>
+                      <span class="card-title activator grey-text text-darken-4">SLS Brickell <i class="mdi-navigation-more-vert right"></i></span>
+                      <p><a href="#">+Details</a></p>
                   </div>
                   <div class="card-reveal">
-                      <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
+                      <span class="card-title grey-text text-darken-4">SLS Brickell <i class="mdi-navigation-close right"></i></span>
                       <p>Here is some more information about this project that is only revealed once clicked on.</p>
                   </div>
               </div>
@@ -164,14 +95,14 @@
           <div class="col s12 m4 l4">
               <div class="card">
                   <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" src="/assets/project3.png">
+                      <img class="activator" src="/assets/1000museum.jpg">
                   </div>
                   <div class="card-content">
-                      <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
-                      <p><a href="#">Project link</a></p>
+                      <span class="card-title activator grey-text text-darken-4">1000 Museum <i class="mdi-navigation-more-vert right"></i></span>
+                      <p><a href="#">+Details</a></p>
                   </div>
                   <div class="card-reveal">
-                      <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
+                      <span class="card-title grey-text text-darken-4">1000 Museum <i class="mdi-navigation-close right"></i></span>
                       <p>Here is some more information about this project that is only revealed once clicked on.</p>
                   </div>
               </div>
@@ -179,14 +110,14 @@
           <div class="col s12 m4 l4">
               <div class="card">
                   <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" src="/assets/project4.jpg">
+                      <img class="activator" src="/assets/granparaiso.jpg">
                   </div>
                   <div class="card-content">
-                      <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
-                      <p><a href="#">Project link</a></p>
+                      <span class="card-title activator grey-text text-darken-4">Gran Paraiso <i class="mdi-navigation-more-vert right"></i></span>
+                      <p><a href="#">+Details</a></p>
                   </div>
                   <div class="card-reveal">
-                      <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
+                      <span class="card-title grey-text text-darken-4">Gran Paraiso<i class="mdi-navigation-close right"></i></span>
                       <p>Here is some more information about this project that is only revealed once clicked on.</p>
                   </div>
               </div>
@@ -194,14 +125,14 @@
           <div class="col s12 m4 l4">
               <div class="card">
                   <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" src="/assets/project5.png">
+                      <img class="activator" src="/assets/slslux.jpg">
                   </div>
                   <div class="card-content">
-                      <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
-                      <p><a href="#">Project link</a></p>
+                      <span class="card-title activator grey-text text-darken-4">SLS Lux <i class="mdi-navigation-more-vert right"></i></span>
+                      <p><a href="#">+Details</a></p>
                   </div>
                   <div class="card-reveal">
-                      <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
+                      <span class="card-title grey-text text-darken-4">SLS Lux<i class="mdi-navigation-close right"></i></span>
                       <p>Here is some more information about this project that is only revealed once clicked on.</p>
                   </div>
               </div>
@@ -209,14 +140,14 @@
           <div class="col s12 m4 l4">
               <div class="card">
                   <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" src="/assets/project6.jpeg">
+                      <img class="activator" src="/assets/brickellcitycentre.jpg">
                   </div>
                   <div class="card-content">
-                      <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
-                      <p><a href="#">Project link</a></p>
+                      <span class="card-title activator grey-text text-darken-4">Brickell City Centre<i class="mdi-navigation-more-vert right"></i></span>
+                      <p><a href="#">+Details</a></p>
                   </div>
                   <div class="card-reveal">
-                      <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
+                      <span class="card-title grey-text text-darken-4">Brickell City Centre <i class="mdi-navigation-close right"></i></span>
                       <p>Here is some more information about this project that is only revealed once clicked on.</p>
                   </div>
               </div>
@@ -227,7 +158,7 @@
 
 <!--Parallax-->
 <div class="parallax-container">
-  <div class="parallax"><img src="/assets/parallax1.png"></div>
+  <div class="parallax"><img src="/assets/parallax.jpg"></div>
 </div>
 
 <!--Team-->
@@ -238,22 +169,20 @@
           <div class="col s12 m3">
               <div class="card card-avatar">
                   <div class="waves-effect waves-block waves-light">
-                      <img class="activator" src="/assets/avatar1.png">
+                      <img class="activator" src="/assets/profilepic.jpg">
                   </div>
                   <div class="card-content">
-                      <span class="card-title activator grey-text text-darken-4">Flash <br/>
+                      <span class="card-title activator grey-text text-darken-4">Marc Von Askën <br/>
                           <small><em><a class="red-text text-darken-1" href="#">CEO</a></em></small></span>
                       <p>
-                          <a class="blue-text text-lighten-2" href="https://www.facebook.com/joash.c.pereira">
+                          <a class="blue-text text-lighten-2" href="https://www.facebook.com/marc.c7">
                               <i class="fa fa-facebook-square"></i>
                           </a>
-                          <a class="blue-text text-lighten-2" href="https://twitter.com/im_joash">
+                          <a class="blue-text text-lighten-2" href="https://twitter.com/prinzvonasken">
                               <i class="fa fa-twitter-square"></i>
                           </a>
-                          <a class="blue-text text-lighten-2" href="https://plus.google.com/u/0/+JoashPereira">
-                              <i class="fa fa-google-plus-square"></i>
-                          </a>
-                          <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/joashp">
+
+                          <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/marccoulange">
                               <i class="fa fa-linkedin-square"></i>
                           </a>
                       </p>
@@ -263,23 +192,21 @@
           <div class="col s12 m3">
               <div class="card card-avatar">
                   <div class="waves-effect waves-block waves-light">
-                      <img class="activator" src="assets/avatar2.png">
+                      <img class="activator" src="assets/profilepic2.jpg">
                   </div>
                   <div class="card-content">
-                      <span class="card-title activator grey-text text-darken-4">Cat Woman<br/>
+                      <span class="card-title activator grey-text text-darken-4">Marc Von Askën<br/>
                           <small><em><a class="red-text text-darken-1" href="#">Designer</a></em></small>
                       </span>
                       <p>
-                          <a class="blue-text text-lighten-2" href="https://www.facebook.com/joash.c.pereira">
+                          <a class="blue-text text-lighten-2" href="https://www.facebook.com/marc.c7">
                               <i class="fa fa-facebook-square"></i>
                           </a>
-                          <a class="blue-text text-lighten-2" href="https://twitter.com/im_joash">
+                          <a class="blue-text text-lighten-2" href="https://twitter.com/prinzvonasken">
                               <i class="fa fa-twitter-square"></i>
                           </a>
-                          <a class="blue-text text-lighten-2" href="https://plus.google.com/u/0/+JoashPereira">
-                              <i class="fa fa-google-plus-square"></i>
-                          </a>
-                          <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/joashp">
+
+                          <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/marccoulange">
                               <i class="fa fa-linkedin-square"></i>
                           </a>
                       </p>
@@ -289,23 +216,21 @@
           <div class="col s12 m3">
               <div class="card card-avatar">
                   <div class="waves-effect waves-block waves-light">
-                      <img class="activator" src="/assets/avatar3.png">
+                      <img class="activator" src="/assets/profilepic.jpg">
                   </div>
                   <div class="card-content">
                       <span class="card-title activator grey-text text-darken-4">
-                          Capt. America <br/>
+                          Marc Von Askën <br/>
                           <small><em><a class="red-text text-darken-1" href="#">CMO</a></em></small></span>
                       <p>
-                          <a class="blue-text text-lighten-2" href="https://www.facebook.com/joash.c.pereira">
+                          <a class="blue-text text-lighten-2" href="https://www.facebook.com/marc.c7">
                               <i class="fa fa-facebook-square"></i>
                           </a>
-                          <a class="blue-text text-lighten-2" href="https://twitter.com/im_joash">
+                          <a class="blue-text text-lighten-2" href="https://twitter.com/prinzvonasken">
                               <i class="fa fa-twitter-square"></i>
                           </a>
-                          <a class="blue-text text-lighten-2" href="https://plus.google.com/u/0/+JoashPereira">
-                              <i class="fa fa-google-plus-square"></i>
-                          </a>
-                          <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/joashp">
+
+                          <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/marccoulange">
                               <i class="fa fa-linkedin-square"></i>
                           </a>
                       </p>
@@ -315,22 +240,20 @@
           <div class="col s12 m3">
               <div class="card card-avatar">
                   <div class="waves-effect waves-block waves-light">
-                      <img class="activator" src="/assets/avatar4.png">
+                      <img class="activator" src="/assets/profilepic2.jpg">
                   </div>
                   <div class="card-content">
-                      <span class="card-title activator grey-text text-darken-4">Robin<br/>
+                      <span class="card-title activator grey-text text-darken-4">Marc Von Askën<br/>
                           <small><em><a class="red-text text-darken-1" href="#">Developer</a></em></small></span>
                       <p>
-                          <a class="blue-text text-lighten-2" href="https://www.facebook.com/joash.c.pereira">
+                          <a class="blue-text text-lighten-2" href="https://www.facebook.com/marc.c7">
                               <i class="fa fa-facebook-square"></i>
                           </a>
-                          <a class="blue-text text-lighten-2" href="https://twitter.com/im_joash">
+                          <a class="blue-text text-lighten-2" href="https://twitter.com/prinzvonasken">
                               <i class="fa fa-twitter-square"></i>
                           </a>
-                          <a class="blue-text text-lighten-2" href="https://plus.google.com/u/0/+JoashPereira">
-                              <i class="fa fa-google-plus-square"></i>
-                          </a>
-                          <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/joashp">
+
+                          <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/marccoulange">
                               <i class="fa fa-linkedin-square"></i>
                           </a>
                       </p>
@@ -381,23 +304,19 @@
           <div class="col l3 s12">
               <h5 class="white-text">Social</h5>
               <ul>
+
                   <li>
-                      <a class="white-text" href="https://www.behance.net/joashp">
-                          <i class="small fa fa-behance-square white-text"></i> Behance
-                      </a>
-                  </li>
-                  <li>
-                      <a class="white-text" href="https://www.facebook.com/joash.c.pereira">
+                      <a class="white-text" href="https://www.facebook.com/marc.c7">
                           <i class="small fa fa-facebook-square white-text"></i> Facebook
                       </a>
                   </li>
                   <li>
-                      <a class="white-text" href="https://github.com/joashp">
+                      <a class="white-text" href="https://github.com/vonasken">
                           <i class="small fa fa-github-square white-text"></i> Github
                       </a>
                   </li>
                   <li>
-                      <a class="white-text" href="https://www.linkedin.com/in/joashp">
+                      <a class="white-text" href="https://www.linkedin.com/in/marccoulange">
                           <i class="small fa fa-linkedin-square white-text"></i> Linkedin
                       </a>
                   </li>

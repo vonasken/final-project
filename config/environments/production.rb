@@ -1,4 +1,11 @@
 Rails.application.configure do
+
+  Plaid.config do |p|
+    p.client_id = ENV['plaid_client_id']
+    p.secret = ENV['plaid_secret']
+    p.env = :production  # or :production
+  end
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.

@@ -1,0 +1,70 @@
+<!--Navigation-->
+<div class="navbar-fixed">
+  <nav id="nav_f" class="default_color" role="navigation">
+      <div class="container">
+          <div class="nav-wrapper">
+          <a href="#" id="logo-container" class="brand-logo">Prinvest</a>
+              <ul class="right hide-on-med-and-down">
+                  <li><%= link_to 'Home', root_path %></li>
+                <% if user_signed_in? %>
+                  <li>Signed in as <%= current_user.name %>.</li>
+                    <li><%= link_to 'Profile', user_path(current_user) %></li>
+                      <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+
+              <% else %>
+          <!-- ============================Sign Up Dropdown ======================================================= -->
+                  <li><a class='dropdown-button blah' href='#' data-activates='dropdown1'>Sign Up</a></li>
+                    <ul id='dropdown1' class='dropdown-content'>
+                      <li><%= link_to 'with email', new_user_registration_path %></li>
+                      <li class="divider"></li>
+                            <li><%= link_to "with Linkedin", user_linkedin_omniauth_authorize_path %></li>
+                      </ul>
+            <!-- =================================================================================== -->
+            <!-- ============================Sign In Dropdown ======================================================= -->
+                    <li><a class='dropdown-button' href='#' data-activates='dropdown2'>Sign In</a></li>
+                      <ul id='dropdown2' class='dropdown-content'>
+                          <li><%= link_to 'with email', new_user_session_path %></li>
+                      <li class="divider"></li>
+                            <li><%= link_to "with Linkedin", user_linkedin_omniauth_authorize_path %></li>
+                      </ul>
+                      <!-- =================================================================================== -->
+              <% end %>
+
+
+              </ul>
+
+    <!-- ================================MOBILE OPTIMIZATION=================================================== -->
+              <ul id="nav-mobile" class="side-nav">
+                <li><%= link_to 'Home', root_path %></li>
+              <% if user_signed_in? %>
+                <li>Signed in as <%= current_user.name %>.</li>
+                  <li><%= link_to 'Profile', user_path(current_user) %></li>
+                    <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+
+            <% else %>
+        <!-- ============================Sign Up Dropdown  ======================================================= -->
+                <li><a class='dropdown-button' href='#' data-activates='dropdown3'>Sign Up</a></li>
+                  <ul id='dropdown3' class='dropdown-content'>
+                    <li><%= link_to 'with email', new_user_registration_path %></li>
+                    <li class="divider"></li>
+                          <li><%= link_to "with Linkedin", user_linkedin_omniauth_authorize_path %></li>
+                    </ul>
+          <!-- =================================================================================== -->
+          <!-- ============================Sign In Dropdown ======================================================= -->
+                  <li><a class='dropdown-button' href='#' data-activates='dropdown4'>Sign In</a></li>
+                    <ul id='dropdown4' class='dropdown-content'>
+                        <li><%= link_to 'with email', new_user_session_path %></li>
+                    <li class="divider"></li>
+                          <li><%= link_to "with Linkedin", user_linkedin_omniauth_authorize_path %></li>
+                    </ul>
+          <!-- =================================================================================== -->
+          <!-- =================================================================================== -->
+          <!-- =================================================================================== -->
+          <!-- =================================================================================== -->
+            <% end %>
+              </ul>
+          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+          </div>
+      </div>
+  </nav>
+</div>

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :charges
 
   get '/temp', to: "listings#temp"
+  get '/linkbank', to: "transactions#linkbank"
 
 root to: 'pages#index'
 end

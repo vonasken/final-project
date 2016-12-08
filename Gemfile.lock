@@ -83,6 +83,10 @@ GEM
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     hashie (3.4.6)
+    hermitage (0.0.7)
+      coffee-rails
+      jquery-rails
+      rails (>= 3.2)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.7.0)
@@ -131,6 +135,8 @@ GEM
       mime-types
       mimemagic (~> 0.3.0)
     pg (0.19.0)
+    plaid (2.2.0)
+      multi_json (~> 1.0)
     puma (3.6.2)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -224,6 +230,7 @@ DEPENDENCIES
   devise
   figaro
   font-awesome-sass (~> 4.7.0)
+  hermitage
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
@@ -232,6 +239,7 @@ DEPENDENCIES
   omniauth-linkedin
   paperclip (~> 5.0.0)
   pg
+  plaid
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
   sass-rails (~> 5.0)
