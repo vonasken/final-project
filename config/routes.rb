@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  mount Dashing::Engine, at: Dashing.config.engine_path
+
   get 'users/new'
 
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
