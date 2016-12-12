@@ -3,4 +3,5 @@ class Listing < ApplicationRecord
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
   has_many :transactions
+  has_many :share
 end

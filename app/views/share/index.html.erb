@@ -1,0 +1,36 @@
+<h1> Your Shares </h1>
+
+<% if @share.empty? %>
+  <p> You have no orders pending.</p>
+<% else %>
+  <%= link_to'Cancel Pending Order', share_clear_path %>
+<% end %>
+
+<br>
+<br>
+<ul>
+
+  <% total = 0 %>
+  <% @share.each do | id, quantity | %>
+      <% listing = Listing.find_by_id(id) %>
+    <li>
+
+          <%= link_to listing.property, listing %></br>
+          <%= image_tag listing.image.url(:medium) %></br>
+
+          Property Price: <%= number_to_currency(listing.price, :unit => '$') %></br>
+          Share Price: <%= number_to_currency(listing.sharePrice, :unit => '$') %></br>
+          Quantity: <%= quantity %></br>
+
+          -------------------------------------------------------
+    </li>
+    <% total += quantity * listing.sharePrice %>
+
+    <% end %>
+    <p><b>Total: <%= number_to_currency(total, :unit => '$')%></b> </p>
+  </ul>
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+  data-key="<%= Rails.configuration.stripe[:stripe_publishable_key]%>"
+  data-amount="#{total}"
+  data-local="auto"></script>
+  ----------
