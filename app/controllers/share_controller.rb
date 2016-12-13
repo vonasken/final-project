@@ -15,7 +15,7 @@ class ShareController < ApplicationController
       else
         share[id] = 1
       end
-
+    
     redirect_to :action => :index
     end
 

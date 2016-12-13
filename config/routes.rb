@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
   get '/temp', to: "listings#temp"
   get '/linkbank', to: "transactions#linkbank"
+  get 'history', to:  "transactions#history"
+  get 'investments', to:  "transactions#investments"
 
 root to: 'pages#index'
 end

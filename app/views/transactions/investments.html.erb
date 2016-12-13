@@ -1,0 +1,124 @@
+
+
+<%= render "transactions/sidebar" %>
+
+
+<h3><center>Your Investments</center></h3>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+<div id="result"></div>
+<table id="table-sparkline">
+    <thead>
+        <tr>
+            <th>Properties</th>
+            <th>Pre-Con Price</br>(000)</th>
+            <th>Price Point</br>(1yr)</th>
+            <th>Selling Price</br>(000)</th>
+            <th>Market Price</th>
+            <th>Profits</br>(000)</th>
+            <th>Community Profits</th>
+        </tr>
+    </thead>
+    <tbody id="tbody-sparkline">
+        <tr>
+  <th>SLS Brickell </th>
+            <td>254</td>
+            <td data-sparkline="71, 78, 39, 66 "/>
+            <td>889</td>
+            <td data-sparkline="68, 89, 80, 96 "/>
+            <td>635</td>
+            <td data-sparkline="3, 26, 41, 60 ; column"/>
+        </tr>
+        <th>Elysee Miami</th>
+                  <td>3,500</td>
+                  <td data-sparkline="61, 80, 10, 49 "/>
+                  <td>4,000</td>
+                  <td data-sparkline="100, 8, 52, 57 "/>
+                  <td>500</td>
+                  <td data-sparkline="-39, 72, -42, -8 ; column"/>
+              </tr>
+
+              <tr>
+        <th>Brickell City Center</th>
+                  <td>350</td>
+                  <td data-sparkline="6, 64, 44, 87 "/>
+                  <td>669</td>
+                  <td data-sparkline="60, 13, 73, 2 "/>
+                  <td>319</td>
+                  <td data-sparkline="-54, 51, -29, 85 ; column"/>
+              </tr>
+            </tbody>
+        </table>
+
+        <div class="row">
+        <div class="col s12 m3">
+          <div class="card #ffa726 orange lighten">
+            <div class="card-content white-text">
+              <span class="card-title">SLS Brickell </span>
+              <p><h3>$20,000</h3></p>
+            </div>
+
+          </div>
+        </div>
+
+
+      <div class="col s12 m3">
+        <div class="card #ffa726 orange lighten ">
+          <div class="card-content white-text">
+            <span class="card-title">Elysee Miami</span>
+            <p><h3>$20,000</h3></p>
+          </div>
+
+        </div>
+      </div>
+
+
+
+        <div class="col s12 m3">
+          <div class="card #ffa726 orange lighten ">
+            <div class="card-content white-text">
+              <span class="card-title">Brickell City Centre</span>
+              <p><h3>$20,000</h3></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+        <div class="row">
+        <div class="col s12 m3">
+          <div class="card #039be5 light-blue ">
+            <div class="card-content white-text">
+              <span class="card-title">Total Investments</span>
+              <p><h3>$60,000</h3></p>
+            </div>
+
+          </div>
+        </div>
+
+
+      <div class="col s12 m3">
+        <div class="card #66bb6a green lighten ">
+          <div class="card-content white-text">
+            <span class="card-title">Total Profits</span>
+            <p><h3>$135,000</h3></p>
+          </div>
+
+        </div>
+      </div>
+  
+
+
+
+        <div class="col s12 m3">
+          <div class="card #ce93d8 purple lighten ">
+            <div class="card-content white-text">
+              <span class="card-title">Total Community Profits</span>
+              <p><h3>$1,454,000</h3></p>
+            </div>
+
+          </div>
+        </div>
+      </div>

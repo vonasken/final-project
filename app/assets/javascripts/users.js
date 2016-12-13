@@ -1,7 +1,7 @@
 // # Place all the behaviors and hooks related to the matching controller here.
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
-$(document).on("turbolinks:load",function () {
+$(document).on("ready",function () {
     /**
      * Create a constructor for sparklines that takes some sensible defaults and merges in the individual
      * chart options. This function is also available from the jQuery plugin as $(element).highcharts('SparkLine').
