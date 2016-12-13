@@ -1,5 +1,8 @@
 <h1> Your Shares </h1>
 
+
+
+
 <% if @share.empty? %>
   <p> You have no orders pending.</p>
 <% else %>
@@ -11,26 +14,50 @@
 <ul>
 
   <% total = 0 %>
-  <% @share.each do | id, quantity | %>
-      <% listing = Listing.find_by_id(id) %>
-    <li>
+  <div class="row">
+      <% @share.each do | id, quantity | %>
+        <% listing = Listing.find_by_id(id) %>
+            <div class="card col s4 m3">
+                <div class="card-image">
+                    <%= image_tag listing.image.url(:medium) %></br>
+                </div>
 
-          <%= link_to listing.property, listing %></br>
-          <%= image_tag listing.image.url(:medium) %></br>
+          <span class="card-title"> <%= link_to listing.property, listing %></span>
 
-          Property Price: <%= number_to_currency(listing.price, :unit => '$') %></br>
-          Share Price: <%= number_to_currency(listing.sharePrice, :unit => '$') %></br>
-          Quantity: <%= quantity %></br>
+              <div class="card-content">
+                  Property Price: <%= number_to_currency(listing.price, :unit => '$') %></br>
+                  Share Price: <%= number_to_currency(listing.sharePrice, :unit => '$') %></br>
+                  Quantity: <%= quantity %></br>
+              </div>
+          </div>
 
-          -------------------------------------------------------
-    </li>
-    <% total += quantity * listing.sharePrice %>
+
+  </div>
+
+  <h5><strong>  <% total += quantity * listing.sharePrice %> </h5></strong>
 
     <% end %>
-    <p><b>Total: <%= number_to_currency(total, :unit => '$')%></b> </p>
   </ul>
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-  data-key="<%= Rails.configuration.stripe[:stripe_publishable_key]%>"
-  data-amount="#{total}"
-  data-local="auto"></script>
-  ----------
+  <%= form_tag charges_path do %>
+    <article>
+      <% if flash[:error].present? %>
+        <div id="error_explanation">
+          <p><%= flash[:error] %></p>
+        </div>
+      <% end %>
+      <label class="amount">
+
+      <span>  <p><b>Total: <%= number_to_currency(total, :unit => '$')%></b> </p></span>
+      </label>
+    </article>
+
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="Total number of Shares Bought"
+            data-amount=total
+            data-locale="auto"></script>
+
+
+  <% end %>
+</br></br>
+  <a href="/listings">Go to Listings</a>
