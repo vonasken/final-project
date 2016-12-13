@@ -2,9 +2,10 @@
 
  <!-- ============================ -->
  <!-- ============================ -->
+ <div class="timmy">
+<div class="row">
 <%= image_tag @listing.image.url(:medium) %>
 
-<div class="timmy">
 
 <p>
   <h2><strong>
@@ -51,8 +52,16 @@
 </p>
 </h6>
 &nbsp;
+<!-- ============================================================ -->
+
+<!-- ============================================================ -->
+
+<!-- ============================================================ -->
+<div style="box-sizing: content-box;width:300px;height:auto;padding:0 6px;margin:1em auto;font:normal normal normal 13px verdana,arial,sans-serif;overflow: hidden;background-color:#3399cc;border-radius: 5px;webkit-border-radius:5px;text-transform:none;text-indent:0;letter-spacing:0;text-align:center;"><div id="title" style="text-align:center;padding:6px 5px 6px 5px;background-color:#3399cc;"><a href="http://www.zillow.com/miami-fl/home-values/#{scrnnm=VonAsken}" target="_blank" rel="nofollow" style="font-weight:bold;font-style:normal;font-size:13px;padding:0;text-decoration:none;color:#f0f2f4;text-decoration:none;line-height:1.2em;text-shadow: 0 1px #000;">Home Value Estimate</a></div><div style="position:relative;text-align:center;font-family:verdana,arial,sans-serif;font-size:10px;background-color:#e3f2f9;border-radius: 5px; border: 1px solid;border-color:#2e84ae;webkit-border-radius: 5px;padding: 1px;"><iframe scrolling="no" src="http://www.zillow.com/widgets/zestimate/ZestimateLargeWidget.htm?did=zillow-shv-large-iframe-widget&type=iframe&address=68+SE+6th+St%2C+Miami%2C+FL+33131&searchbox=yes&region=Miami&skinnyWidget=true&tc=3399cc&bgc=e3f2f9" width="296" frameborder="0" height="360"></iframe></div><div id="footer-links-container" style="height:auto;padding-bottom:5px;margin:5px 5px 0;text-align:center;"><div style="height:auto;display:block;overflow:hidden;"><a href="http://www.zillow.com/miami-fl/#{scrnnm=VonAsken}" target="_blank" rel="nofollow" style="font-size:11px;padding:0;width:285px;color:#f0f2f4;text-decoration:none;" scen="s1"><span class="region">Miami</span> on Zillow</a></div></div></div>
+<!-- ============================================================ -->
+</div>
 <!-- <%= link_to "Buy Shares", charge_path(), :class => "waves-effect waves-light btn" %> -->
-<a href="/share/<%= @listing.id %>"> Buy Shares </a></br>
-<a href="/share"> Current Orders </a>
+<a class="waves-effect blue waves-light btn" href="/share/<%= @listing.id %>"> Buy Shares </a></br></br>
+<a class="waves-effect waves-light btn" href="/share"> Current Orders </a>
 
 </div>
