@@ -30,7 +30,11 @@
               <div class="card-content">
                   Property Price: <%= number_to_currency(listing.price, :unit => '$') %></br>
                   Share Price: <%= number_to_currency(listing.sharePrice, :unit => '$') %></br>
-                  Quantity: <%= quantity %></br>
+                  Quantity:
+                  <%=  quantity %>
+
+
+                   <%= quantity %></br>
               </div>
           </div>
 
