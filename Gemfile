@@ -13,7 +13,7 @@ gem 'font-awesome-sass', '~> 4.7.0'
 gem 'hermitage'
 gem 'plaid'
 gem 'rails_admin', '~> 1.0'
-gem 'aws-sdk', '~> 2.3'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
