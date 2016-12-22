@@ -1,16 +1,23 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-img {
-    width: 280px;
-    height: 200px;
+
+// ============  The 3 Icons
+.icono1 {
+  width: 220px;
+  height: 150px;
 }
 
-.card-image {
-    // width: 239px;
-    // min-height: 120px;
-    // max-height: auto;
-    // float: left;
-    margin: 3px;
-    padding: 3px;
+.icono2 {
+  width: 220px;
+  height: 150px;
+}
+.icono3 {
+  width: 220px;
+  height: 150px;
+}
+// ============ LISTING IMAGES
+img {
+  width: 280px;
+  height: 200px;
 }
