@@ -1,6 +1,7 @@
 class ListingsController < ApplicationController
   def index
-    @listings = Listing.all
+    @search = Listing.search(params[:q])
+    @listings = @search.result
   end
   def show
     @listing = Listing.find(params[:id])
@@ -17,7 +18,7 @@ class ListingsController < ApplicationController
   end
 
   def temp
-    
+
   end
 
 private

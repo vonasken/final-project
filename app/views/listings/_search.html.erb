@@ -1,0 +1,10 @@
+<%= search_form_for @search do |f| %>
+
+  # Search if the name field contains...
+  <%= f.label :property %>
+  <%= f.search_field :property %>
+
+
+
+  <%= f.submit %>
+<% end %>
