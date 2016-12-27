@@ -4,4 +4,12 @@ class Listing < ApplicationRecord
 
 
   has_many :shares
+
+  def self.search(search)
+    if search
+        where(["property LIKE ?", "%#{search}%"])
+    else
+          all
+    end
+  end
 end
