@@ -20,11 +20,16 @@
     min-height: 632px;
     max-height: 864px;
     position: relative;
-    background-color: #2196F3;
+
+}
+.bg {
+  background-image: url("modern.jpg");
+  background-size: 100% 100%;
+
 }
 
 #nav_f{
-    box-shadow: none !important; 
+    box-shadow: none !important;
     -webkit-box-shadow:none !important;
 }
 

@@ -13,7 +13,8 @@
           <div class="nav-wrapper">
           <a href="#" id="logo-container" class="brand-logo">Prinvest</a>
               <ul class="right hide-on-med-and-down">
-                  <li><%= link_to 'Home', root_path %></li>
+                <li><%= link_to 'Home', root_path %></li>
+                  <li><%= link_to 'Listings', listings_path %></li>
                 <% if user_signed_in? %>
                   <li>Signed in as <%= current_user.name %>.</li>
                     <li><%= link_to 'Dash', user_path(current_user) %></li>
