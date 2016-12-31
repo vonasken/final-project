@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get '/linkbank', to: "transactions#linkbank"
   get 'history', to:  "transactions#history"
   get 'investments', to:  "transactions#investments"
+  get 'getstarted', to: "pages#getstarted"
 
 root to: 'pages#index'
 end
