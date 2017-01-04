@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get 'history', to:  "transactions#history"
   get 'investments', to:  "transactions#investments"
   get 'getstarted', to: "pages#getstarted"
+  get 'learnmore', to: "pages#learnmore"
 
 root to: 'pages#index'
 end
